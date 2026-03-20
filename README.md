@@ -7,16 +7,13 @@
 
 Dual-core audio engine for Raspberry Pi Pico (RP2040).
 
-PicoSound delivers glitch-free audio for any RP2040 application by dedicating 
-Core1 exclusively to audio processing. While your main program runs on Core0 
-(handling graphics, I/O, calculations, or game logic), Core1 manages the audio 
-mixer and output independently.
+PicoSound delivers glitch-free audio for any RP2040 application by dedicating Core1 exclusively to audio processing. While your main program runs on Core0 (handling graphics, I/O, calculations, or game logic), Core1 manages the audio mixer and output independently.
 
-This architecture eliminates audio dropouts caused by blocking operations like 
-SPI transfers, flash writes, or heavy computations. Audio continues uninterrupted 
-regardless of what Core0 is doing.
+This architecture eliminates audio dropouts caused by blocking operations like SPI transfers, flash writes, or heavy computations. Audio continues uninterrupted regardless of what Core0 is doing.
 
 Supports both synthesized sounds (waveforms, melodies, effects) and streaming from WAV files. This is suitable for any project requiring reliable audio output: synthesizers, musical instruments, notification systems, interactive installations, games or educational tools.
+
+Works seamlessly with both Arduino IDE and PlatformIO. The library uses standard C++ structure (.h/.cpp files) ensuring compatibility across development environments.
 
 ## Features
 
@@ -27,6 +24,7 @@ Supports both synthesized sounds (waveforms, melodies, effects) and streaming fr
 - Melody sequencer
 - WAV streaming (LittleFS or PROGMEM)
 - Frequency sweeps
+- Arduino IDE and PlatformIO compatible
 
 ## Architecture
 
