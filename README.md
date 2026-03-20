@@ -12,7 +12,7 @@ SPI transfers, flash writes, or heavy computations. Audio continues uninterrupte
 regardless of what Core0 is doing.
 
 Supports both synthesized sounds (waveforms, melodies, effects) and streaming 
-from WAV files. Not limited to games—suitable for any project requiring reliable 
+from WAV files. Not limited to games, but suitable for any project requiring reliable 
 audio output: synthesizers, musical instruments, notification systems, interactive 
 installations, or educational tools.
 
