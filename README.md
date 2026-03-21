@@ -119,7 +119,7 @@ See [Hardware Guide](docs/HARDWARE.md) for schematics.
 ## Requirements
 
 - Raspberry Pi Pico (RP2040)
-- Arduino-Pico core (Earle Philhower)
+- [Arduino-Pico core (Earle Philhower)](https://github.com/earlephilhower/arduino-pico)
 - [PicoSem library](https://github.com/IWILZ/PicoSem)
 
 ## License
