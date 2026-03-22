@@ -36,6 +36,9 @@ void setup() {
 
   Serial.println("PicoSound Basic Example");
   Serial.println("Press buttons to play sounds");
+  Serial.println("  GP18 - Beep");
+  Serial.println("  GP19 - Explosion");
+  Serial.println("  GP20 - Melody");
 }
 
 void loop() {
