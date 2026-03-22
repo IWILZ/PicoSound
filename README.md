@@ -109,9 +109,7 @@ See [examples](examples/) for complete code.
 
 ## Quick Start (PlatformIO)
 
-This branch works with PlatformIO but requires inline configuration in your main file.
-
-For cleaner code organization with separate config files, use the [platformio-style branch](../../tree/platformio-style).
+This branch works also with PlatformIO but for cleaner code organization with separate config files, use the [platformio-style branch](../../tree/platformio-style).
 
 ## API
 
