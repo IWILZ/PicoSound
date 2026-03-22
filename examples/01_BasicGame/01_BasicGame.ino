@@ -67,9 +67,9 @@ const SoundDefinition PICOSOUND_TABLE[] = {
 #define BTN_EXPLOSION 19
 #define BTN_MELODY    20
 
-// Enable next define if you are using an I2S module 
-// (like a MAX98357A) controlled by a GPIO pin
-#define I2S_DS_PIN    0   // GPIO pin to mute/unmute MAX98357A
+// ========= Enable next define if you are using an I2S module ========== 
+// ==========   (like a MAX98357A) controlled by a GPIO pin    ==========
+// #define I2S_DS_PIN    0   // GPIO pin to mute/unmute MAX98357A
 
 void setup() {
   delay(500);
