@@ -292,13 +292,28 @@ typedef struct {
   };
 #endif
 
-// Sound IDs must be defined in sketch before including PicoSound
-// Example:
+//=============================================================================
+// SOUND IDs
+// User must define SoundID enum in sketch before including PicoSound
+//=============================================================================
+// Example in your .ino:
 //   typedef enum {
 //     SND_NONE = 0,
 //     SND_BEEP,
 //     SND_LASER,
+//     SND_MAX      // <- Always add SND_MAX as last entry
 //   } SoundID;
+
+// Ensure SND_NONE is always defined (fallback)
+#ifndef SND_NONE
+  #define SND_NONE 0
+#endif
+
+// Ensure SND_MAX is defined (fallback to large value)
+#ifndef SND_MAX
+  #define SND_MAX 255
+  #warning "SND_MAX not defined by user. Using default value 255."
+#endif
 
 // Sound table must be defined by user in sketch
 // See examples for reference
