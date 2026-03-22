@@ -88,15 +88,21 @@ const SoundDefinition PICOSOUND_TABLE[] = {
 };
 
 // ========== PROGRAM ==========
-void setup() {}
+void setup() {
+  // Your setup here
+}
 
 void loop() {
   SendAudioCommand(CMD_PLAY_SOUND, SND_BEEP, 80);
   delay(1000);
 }
 
-void setup1() { PicoSound_AudioCore_Setup1(); }
-void loop1() { PicoSound_AudioCore_Loop1(); }
+void setup1() {
+  PicoSound_AudioCore_Setup1();
+}
+void loop1() {
+  PicoSound_AudioCore_Loop1();
+}  
 ```
 
 See [examples](examples/) for complete code.
