@@ -1,5 +1,7 @@
 # PicoSound
 
+![PicoSound Audio Library](https://raw.githubusercontent.com/IWILZ/PicoSound/main/docs/images/picosound_banner.jpg)
+
 ![Branch](https://img.shields.io/badge/Branch-Arduino%20Style-green)
 [![RP2040](https://img.shields.io/badge/RP2040-Raspberry%20Pi%20Pico-C51A4A?logo=raspberrypi)](https://www.raspberrypi.com/documentation/microcontrollers/raspberry-pi-pico.html)
 [![Arduino](https://img.shields.io/badge/Arduino-Compatible-00979D?logo=arduino)](https://arduino-pico.readthedocs.io/)
