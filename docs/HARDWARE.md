@@ -66,7 +66,7 @@ This not only manages the current consumption better without excessively overloa
 
 ### Wiring (NPN transistor + Passive Speaker)
 
-![PWM output with a NPN transistor](https://github.com/IWILZ/PicoSound/blob/main/docs/images/PWM_output.jpg)
+![PWM output with a NPN transistor](./images/PWM_output.jpg)
 
 **Note:** Low volume. Use amplifier for better results.
 
