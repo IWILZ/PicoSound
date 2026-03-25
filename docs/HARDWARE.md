@@ -2,7 +2,7 @@
 
 ## I2S Output (MAX98357A)
 
-An I2S audio module is recommended for best audio quality and here is described the MAX98357A but you can use also other similar modules.
+An I2S audio module is recommended for best audio quality and here is described the popular and low cost MAX98357A but you can use also other similar modules.
 
 ### Wiring
 
@@ -19,35 +19,34 @@ GND                 →      GND
 
 ### SD Pin (Shutdown/Mode)
 
-The SD pin controls shutdown and mono/stereo mode:
+The SD pin controls both shutdown and mono/stereo mode:
 
-- **GND** - Shutdown (muted)
-- **~1.0V** - Mono output (left + right mixed)
-- **3.3V** - Stereo output
+- **GND**    - Shutdown (muted)
+- **~1.0V**  - Audio Unmuted and Mono output (left + right mixed)
+- **3.3V**   - Stereo output
 
-**For mono (recommended):**
+So if you want to control by program the mute/unmute function you can make this simple circuit using in the same time the "mono" mode because when GPIO pin is high you have 1V on SD pin and when is low you "shutdown" the module.
 
 ![Controlling SD pin](./images/SD_control.jpg)
+```
+/***********************************************************
+ I2SEnable()
+ Enables the I2S audio  module
+ ***********************************************************/
+void I2SEnable() {
+  digitalWrite(I2S_DS_PIN, HIGH);
+  delay(5);
+} // I2SEnable()
 
+/***********************************************************
+ I2SDisable()
+ Disables the I2S audio module
+ ***********************************************************/
+void I2SDisable() {
+  digitalWrite(I2S_DS_PIN, LOW);
+  delay(5);
+} // I2SDisable()
 ```
-        3k3
-3.3V ───┬─── GP14 ───┬─── SD (MAX98357A)
-        │             │
-        └─── 1k5 ─────┴─── GND
-```
-This gives ~1V on SD.
-
-**For hardware mute control:**
-```
-GPIO ───┬─── 3k3 ───┬─── SD
-        │           │
-        └─── 1k5 ───┴─── GND
-        
-GPIO=HIGH → ~1V → Mono
-GPIO=LOW  → 0V  → Mute
-```
-
-Use `AudioMuteHW()` / `AudioUnmuteHW()` functions.
 
 ### Configuration
 
@@ -58,6 +57,11 @@ In `picosound_user_cfg.h`:
 #define USER_PIN_WS     15
 #define USER_PIN_DATA   16
 ```
+
+Popular I2S modules:
+- Adafruit I2S 3W Class D Amplifier Breakout 
+- SparkFun I2S Audio Breakout - MAX98357A
+- AZDelivery MAX98357A
 
 ---
 
@@ -71,7 +75,7 @@ This not only manages the current consumption better without excessively overloa
 
 ![PWM output with a NPN transistor](./images/PWM_output.jpg)
 
-**Note:** Low volume. Use amplifier for better results.
+**Note:** Low volume. Use a Class D amplifier or a I2S module for better results.
 
 ### Wiring (Class D Amplifier)
 
