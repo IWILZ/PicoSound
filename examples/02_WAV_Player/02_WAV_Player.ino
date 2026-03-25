@@ -24,6 +24,12 @@
 #define USER_PIN_WS     15
 #define USER_PIN_DATA   16
 
+// Enable next define if you are using an I2S module 
+// (like a MAX98357A) controlled by a GPIO pin
+// see: https://github.com/IWILZ/PicoSound/blob/main/docs/HARDWARE.md
+// ----------------------------------------------------------------------------
+// #define I2S_DS_PIN    0   // GPIO pin to mute/unmute MAX98357A
+
 // Sound IDs for WAV files
 typedef enum {
   SND_NONE = 0,
@@ -114,6 +120,13 @@ void setup() {
   pinMode(BTN_SOUND1, INPUT_PULLUP);
   pinMode(BTN_SOUND2, INPUT_PULLUP);
   pinMode(BTN_SOUND3, INPUT_PULLUP);
+
+  if (USER_SND_OUT==OUT_I2S){
+    #ifdef I2S_DS_PIN
+    pinMode(I2S_DS_PIN, OUTPUT);      // MAX98357A DS control pin
+    digitalWrite(I2S_DS_PIN, HIGH);   // enable MAX98357A
+    #endif
+  }
   
   Serial.println("\nReady! Press buttons:");
   Serial.println("  GP18 - Play sound1.wav");
