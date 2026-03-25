@@ -40,9 +40,7 @@ Create a `data/` folder in your sketch directory:
 
 ### 2. Upload Filesystem
 
-Tools → Pico LittleFS Data Upload
-
-This uploads the data/ folder to the Pico's filesystem.
+To upload data/ folder to the Pico filesystem, use **Pico LittleFS Data Upload** or press CTRL-SHIFT-P and select **Upload LittleFS to Pico/ESP8266/ESP32**
 
 ### 3. Upload Sketch
 
