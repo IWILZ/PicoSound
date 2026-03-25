@@ -69,7 +69,9 @@ const SoundDefinition PICOSOUND_TABLE[] = {
 
 // Enable next define if you are using an I2S module 
 // (like a MAX98357A) controlled by a GPIO pin
-#define I2S_DS_PIN    0   // GPIO pin to mute/unmute MAX98357A
+// see: https://github.com/IWILZ/PicoSound/blob/main/docs/HARDWARE.md
+// ----------------------------------------------------------------------------
+// #define I2S_DS_PIN    0   // GPIO pin to mute/unmute MAX98357A
 
 void setup() {
   delay(500);
