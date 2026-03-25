@@ -26,11 +26,10 @@ The SD pin controls shutdown and mono/stereo mode:
 - **3.3V** - Stereo output
 
 **For mono (recommended):**
-```
 
 ![Controlling SD pin](./images/SD_control.jpg)
 
-
+```
         3k3
 3.3V ───┬─── GP14 ───┬─── SD (MAX98357A)
         │             │
