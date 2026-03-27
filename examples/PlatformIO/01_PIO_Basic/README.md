@@ -47,7 +47,6 @@ lib_deps =
 
 ; Build flags
 build_flags = 
-    -D PLATFORMIO
     -D PICO_BOARD=pico
     -I include
     
@@ -102,10 +101,18 @@ Edit `include/picosound_user_cfg.h` to:
 Runs your main program in `main.cpp` and sends audio commands to Core1 via `SendAudioCommand()`.
 
 ### Core1 (Audio Engine)
-Runs independently in `setup1()` and `loop1()`. Handles all audio mixing and I2S output.
+Runs independently in `setup1()` and `loop1()`. Handles all audio syntesis, streaming, mixing and I2S output.
 
 ### Configuration
-All sound definitions are in `include/picosound_user_cfg.h`. This keeps your main code clean and makes sounds reusable across multiple files.
+All sound definitions are in `include/picosound_user_cfg.h`.  
+This keeps your main code clean and makes sounds reusable across multiple files and for larger projects you can also use the other 2 config files by the templates, including them into `include/picosound_user_cfg.h`
+
+```cpp
+#include <PicoSound.h>    
+#include "picosound_melodies.h"
+#include "picosound_samples.h"
+```
+
 
 ## Next Steps
 
