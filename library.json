@@ -1,6 +1,6 @@
 {
   "name": "PicoSound",
-  "version": "1.1.0",
+  "version": "1.1.1",
   "description": "Dual-core audio engine for Raspberry Pi Pico (RP2040). Multi-channel mixer with I2S/PWM output, synthesized sounds, melody sequencer, and WAV streaming. Optimized for Earle Philhower core.",
   "keywords": [
     "rp2040",
