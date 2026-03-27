@@ -69,7 +69,6 @@ lib_deps =
 
 ; Build flags
 build_flags = 
-    -D PLATFORMIO
     -D PICO_BOARD=pico
     -I include
     
@@ -151,6 +150,17 @@ The program lists all files found on LittleFS and you can play with buttons!
 | loop | true/false | Loop playback? |
 | filesystem_path | "/file.wav" | Path on LittleFS |
 | use_filesystem | true | Read from LittleFS |
+
+
+### Configuration
+All sound definitions are in `include/picosound_user_cfg.h`.  
+This keeps your main code clean and makes sounds reusable across multiple files and for larger projects you can also use the other 2 config files by the templates, including them into `include/picosound_user_cfg.h`
+
+```cpp
+#include <PicoSound.h>    
+#include "picosound_melodies.h"
+#include "picosound_samples.h"
+```
 
 ## Troubleshooting
 
