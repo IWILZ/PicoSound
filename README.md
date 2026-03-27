@@ -29,7 +29,7 @@ development environments.
 
 ## Configuration Approach
 
-Simple examples are provided and depending on the development environment (Arduino IDE or PlatformIO), they differ only in the place you can configure your sounds:
+Simple examples are provided and depending on the development environment (**Arduino IDE** or **PlatformIO**), they differ only in the place you can configure your sounds:
 
 ```
  * Arduino IDE ----→ into your *.ino file
