@@ -71,6 +71,8 @@ lib_deps =
 build_flags = 
     -D PICO_BOARD=pico
     -I include
+; -> to change the default 16KHz sound sample rate, use the following line
+;   -D PICOSOUND_DEFAULT_SAMPLE_RATE=22050
     
 ; Upload settings
 upload_protocol = picotool
