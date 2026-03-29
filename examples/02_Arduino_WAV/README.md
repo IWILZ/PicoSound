@@ -118,17 +118,14 @@ Press buttons to play sounds!
 - File path is case-sensitive: "/Sound1.wav" ≠ "/sound1.wav"
 - Check serial monitor for file list
 - Verify file exists on LittleFS
+- Check your setting with **Flash size** funcition of Arduino IDE
 
 ## File Size Limits
 
-LittleFS partition size is set in `platformio.ini`:
-```ini
-board_build.filesystem_size = 1m  ; 1 MB for files
-```
-
 With 1MB:
-- ~60 seconds of audio at 16kHz/16-bit/Mono
-- Adjust size if you need more storage
+- ~32 seconds of audio at 16kHz/16-bit/Mono
+- Increase size of your LittleFS partition if you need more storage 
+- Consider a Pi Pico with 16MB Flash from Amazon or AliExpress
 
 ## Next Steps
 
